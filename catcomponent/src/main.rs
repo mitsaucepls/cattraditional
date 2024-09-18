@@ -21,7 +21,7 @@ async fn main() {
     let app = Router::new().route("/", get(handler));
 
     // run it
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3001")
         .await
         .unwrap();
     tracing::info!("listening on {}", listener.local_addr().unwrap());
